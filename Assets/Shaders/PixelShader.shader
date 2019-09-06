@@ -3,6 +3,8 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Columns ("Columns", float) = 64
+        _Rows("Rows",float) = 64
     }
     SubShader
     {
@@ -37,13 +39,26 @@
                 return o;
             }
 
+            float _Columns;
+            float _Rows;
             sampler2D _MainTex;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
+                float2 uv = i.uv;
+                
+                uv.x  *= _Columns;
+                uv.y *= _Rows;
+            
+                uv.x = round(uv.x);
+                uv.y = round(uv.y);
+                
+                 uv.x  /= _Columns;
+                uv.y /= _Rows;
+            
+                fixed4 col = tex2D(_MainTex,uv);
                 // just invert the colors
-                col.rgb = 1-col.rgb;
+                col.rgb = col.rgb;
                 return col;
             }
             ENDCG
