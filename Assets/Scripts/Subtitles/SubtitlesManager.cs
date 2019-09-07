@@ -44,22 +44,22 @@ public class SubtitlesManager : MonoBehaviour
 		if (subtitles.Count == nextId)
 		{
 			Debug.Log("Koniec napisów");
-			subtitleScript.ShowSubtitles("Koniec napisów", null, 5f);
+			subtitleScript.ShowSubtitles("The end", null, 5f);
 			return;
 		}
 
 		//disableMovement
 
-		if (subtitlesClip.Count < nextId)
+		if (subtitlesClip.Count > nextId)
 		{
-			if (extraOffset.Count < nextId)
+			if (extraOffset.Count > nextId)
 				subtitleScript.ShowSubtitles(subtitles[nextId], subtitlesClip[nextId], extraOffset[nextId]);
 			else
 				subtitleScript.ShowSubtitles(subtitles[nextId], subtitlesClip[nextId]);
 		}
 		else
 		{
-			if (extraOffset.Count < nextId)
+			if (extraOffset.Count > nextId)
 				subtitleScript.ShowSubtitles(subtitles[nextId], null, extraOffset[nextId]);
 			else
 				Debug.LogError("Subtititles with no length", gameObject);
