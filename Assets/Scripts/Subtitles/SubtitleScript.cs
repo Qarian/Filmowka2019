@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -17,6 +18,7 @@ public class SubtitleScript : MonoBehaviour
 	AudioSource audioSource;
 	StreamVideo streamVideoScript;
 	CharacterController controller;
+	UnityEvent onSubtitlesClose;
 
 	int subtitlesId = 0;
 
@@ -29,9 +31,10 @@ public class SubtitleScript : MonoBehaviour
 		controller = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
 	}
 
-	public void ShowSubtitles(List<SubtitlesFile> subtitles)
+	public void ShowSubtitles(List<SubtitlesFile> subtitles, UnityEvent onSubtitlesClose)
 	{
 		this.subtitles = subtitles;
+		this.onSubtitlesClose = onSubtitlesClose;
 		ShowCurrentSubtitles();
 	}
 

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
-  m_Name: 'Subtitles #2'
+  m_Name: Sub 0
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
-  audio: {fileID: 8300000, guid: 176a34df6b10b354ab059a1a20d4723c, type: 3}
-  extraTime: 3
+  text: 0 Tekst
+  audio: {fileID: 8300000, guid: 70e04b132b403504284b8fa636c7539d, type: 3}
+  extraTime: 0

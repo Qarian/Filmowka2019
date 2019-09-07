@@ -46,7 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a797ac75da3aba9438c06ae0f351aa2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
+  meshGO: {fileID: 6698001695409443967}
+  trailParticle: {fileID: 6419955741524964729}
+  boomParticleGO: {fileID: 6419955743050590366}
   target: {fileID: 0}
 --- !u!1 &6419955741524964724
 GameObject:

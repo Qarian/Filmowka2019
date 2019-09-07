@@ -48,9 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitlesPrefab: {fileID: 6168456646093667717, guid: baec8c603dca5c441914c13e819ce434,
     type: 3}
-  subtitles: []
-  subtitlesClip: []
-  extraOffset: 
 --- !u!328 &64435294
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -72,14 +69,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1

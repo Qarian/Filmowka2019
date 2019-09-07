@@ -10,7 +10,12 @@ public class PickUp : MonoBehaviour
 	List<SubtitlesFile> subtitles = default;
 	[SerializeField]
 	GameObject objectToActivate = default;
-	[SerializeField] UnityEvent onPickUp = default;
+
+	[Space]
+	[SerializeField]
+	UnityEvent onPickUp = default;
+	[SerializeField]
+	UnityEvent onSubtitlesClose = default;
 
 	public float dissolveSpeed = 1.0f;
 	public float startDissolveValue = 0.8f;
@@ -65,13 +70,13 @@ public class PickUp : MonoBehaviour
 	
 	public void ShowNextSubtitles()
 	{
-		SubtitlesManager.singleton.ShowSubtitles(subtitles);
+		SubtitlesManager.singleton.ShowSubtitles(subtitles, onSubtitlesClose);
 	}
 
 	public void ChangeActiveObject()
 	{
-		objectToActivate.SetActive(true);
 		transform.parent.gameObject.SetActive(false);
+		objectToActivate.SetActive(true);
 	}
 
 	private void IncreaseBloom()
@@ -89,8 +94,9 @@ public class PickUp : MonoBehaviour
 			if (bloom.intensity.value >= 150.0f)
 			{
 				triggered = false;
-				onPickUp.Invoke();
 				dissolveMaterial.SetFloat("_Dissolve", startDissolveValue);
+				onPickUp.Invoke();
+				
 				TeleportPlayer();
 			
 				mainCamera.fieldOfView = initialFieldOfView;

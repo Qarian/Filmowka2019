@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(StreamVideo))]
 public class SubtitlesManager : MonoBehaviour
@@ -27,9 +27,9 @@ public class SubtitlesManager : MonoBehaviour
 		subtitleScript.Begin(streamVideoScript);
 	}
 
-	public void ShowSubtitles(List<SubtitlesFile> subtitles)
+	public void ShowSubtitles(List<SubtitlesFile> subtitles, UnityEvent onSubtitlesClose)
 	{
-		subtitleScript.ShowSubtitles(subtitles);
+		subtitleScript.ShowSubtitles(subtitles, onSubtitlesClose);
 	}
 	/*
 	public void ShowNextSubtitles()
