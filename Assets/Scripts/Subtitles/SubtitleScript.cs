@@ -66,6 +66,7 @@ public class SubtitleScript : MonoBehaviour
 				SceneManager.LoadScene(1);
 
 			controller.enabled = true;
+			subtitlesId = 0;
 
 			if (onSubtitlesClose != null)
 				onSubtitlesClose.Invoke();
