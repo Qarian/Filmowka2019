@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf9ac494731e7d4ba986b686dfa2f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skyRotationSpeed: 0
 --- !u!1001 &1134121744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,6 +556,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 5682583681293407192, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
+        type: 3}
+      propertyPath: postprocess
+      value: 
+      objectReference: {fileID: 1661306352}
     - target: {fileID: 87438172270885418, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
         type: 3}
       propertyPath: m_IsTrigger
@@ -612,7 +618,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f651abbd06720b241953494a4318d604, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
