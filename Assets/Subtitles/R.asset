@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: R
   m_EditorClassIdentifier: 
   text: Niebieskie naisy
-  audio: {fileID: 8300000, guid: 176a34df6b10b354ab059a1a20d4723c, type: 3}
+  audio: {fileID: 8300000, guid: ee3281f1ce1c3224f9bcfa2c87c2192d, type: 3}
   extraTime: 3

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: B
   m_EditorClassIdentifier: 
   text: Czerwone napisy
-  audio: {fileID: 8300000, guid: d8c886c64da92f547be9a04bcd88a526, type: 3}
+  audio: {fileID: 8300000, guid: b5086fa8ee6db5c47bb0ba2815209818, type: 3}
   extraTime: 0

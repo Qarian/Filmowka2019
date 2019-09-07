@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
-  m_Name: RRB
+  m_Name: Invisibility 0
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
-  audio: {fileID: 8300000, guid: 1a4b27d7f6647f649afeb226cf13b262, type: 3}
-  extraTime: 3
+  text: 
+  audio: {fileID: 8300000, guid: 73bd958a833ed5d4aa59e18fee012cb7, type: 3}
+  extraTime: 0

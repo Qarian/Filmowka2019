@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Invisibility 1
   m_EditorClassIdentifier: 
   text: 
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 30399b6c846e2ec428a74ba7a97a3f9f, type: 3}
   extraTime: 0

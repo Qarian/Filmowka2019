@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RRRR
   m_EditorClassIdentifier: 
   text: Niebieskie naisy
-  audio: {fileID: 8300000, guid: 176a34df6b10b354ab059a1a20d4723c, type: 3}
+  audio: {fileID: 8300000, guid: d7addffcb94c463458c03839d22e146e, type: 3}
   extraTime: 3
