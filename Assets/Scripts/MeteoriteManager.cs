@@ -38,6 +38,7 @@ public class MeteoriteManager : MonoBehaviour
 
 	public void StartGeneratingMeteorites(int strength)
 	{
+		generating = true;
 		this.strength = strength;
 		transform.position = new Vector3(transform.position.x, 8f - strength * 0.7f, transform.position.z);
 		radius = 9f - 1f * strength;
