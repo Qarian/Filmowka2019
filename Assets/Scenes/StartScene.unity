@@ -187,11 +187,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2015208528493044310, guid: e31a634d1319ddd4288fdb0e6eec0263,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2015208528814515794, guid: e31a634d1319ddd4288fdb0e6eec0263,
         type: 3}
       propertyPath: m_Enabled
@@ -210,6 +205,11 @@ PrefabInstance:
     - target: {fileID: 2015208527829869123, guid: e31a634d1319ddd4288fdb0e6eec0263,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015208528493044310, guid: e31a634d1319ddd4288fdb0e6eec0263,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
