@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RRRBR 2
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: You have choosen feeble living instead of being immortal.
   audio: {fileID: 8300000, guid: 0883e78b4f7b68d46979b575389ccc89, type: 3}
-  extraTime: 3
+  extraTime: 0

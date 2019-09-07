@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RRRBB
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: <color=blue>You feeble boy, you wont have any choice anymore. You are mine!</color>
   audio: {fileID: 8300000, guid: 93abd7545be75b44fba6a3926ac505ad, type: 3}
-  extraTime: 3
+  extraTime: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RRRBR 1
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: Alright then...
   audio: {fileID: 8300000, guid: afb6c59bfdfe44f41ac92835f2ce6386, type: 3}
-  extraTime: 3
+  extraTime: 1

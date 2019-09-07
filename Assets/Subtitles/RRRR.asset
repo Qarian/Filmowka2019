@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RRRR
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: <color=red>You feeble fool! There's no escape! You dont deserve to live!</color>
   audio: {fileID: 8300000, guid: d7addffcb94c463458c03839d22e146e, type: 3}
   extraTime: 0

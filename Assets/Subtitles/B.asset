@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: B
   m_EditorClassIdentifier: 
-  text: Czerwone napisy
+  text: Good, very good, such a lovely boy. Now go <color=blue>there</color>.
   audio: {fileID: 8300000, guid: b5086fa8ee6db5c47bb0ba2815209818, type: 3}
   extraTime: 0

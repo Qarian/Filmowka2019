@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: GameOver 1
   m_EditorClassIdentifier: 
-  text: You are loser
-  audio: {fileID: 0}
+  text: hahahaha
+  audio: {fileID: 8300000, guid: f0d158d7101fe954fa62389f2b563290, type: 3}
   extraTime: 0
