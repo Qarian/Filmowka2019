@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: Intro 3
   m_EditorClassIdentifier: 
-  text: 0 Tekst
+  text: There is just the obiedence me.
   audio: {fileID: 8300000, guid: 10dbb1de13c8e154baa71fae116b9183, type: 3}
   extraTime: 0

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: You are loser
   audio: {fileID: 0}
-  extraTime: 2
+  extraTime: 0

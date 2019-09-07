@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RRR
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: Stop driving me <color=red>mad!</color>
   audio: {fileID: 8300000, guid: 1562f870b57e6fe4499b0e3a454f11cf, type: 3}
-  extraTime: 3
+  extraTime: 0

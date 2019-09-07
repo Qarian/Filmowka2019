@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RB
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: Good boy
   audio: {fileID: 8300000, guid: e35f36f5c433f904798a22c0bc957de7, type: 3}
-  extraTime: 3
+  extraTime: 0
