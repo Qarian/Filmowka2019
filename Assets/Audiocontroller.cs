@@ -1,12 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Audiocontroller : MonoBehaviour
 {
-    // Start is called before the first frame update
+	public static Audiocontroller singleton;
+
     void Start()
     {
+		if (singleton != null)
+		{
+			Destroy(gameObject);
+			return;
+		}
         DontDestroyOnLoad(gameObject);
     }
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.R))
+			SceneManager.LoadScene(0);
+	}
 }
