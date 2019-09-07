@@ -12,6 +12,10 @@ public class StarScript : MonoBehaviour
 	[SerializeField]
 	GameObject boomParticleGO = default;
 	[SerializeField]
+	AudioSource hitSound = default;
+
+	[Space]
+	[SerializeField]
 	Transform target = default;
 
 	[Space]
