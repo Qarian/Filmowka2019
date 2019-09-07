@@ -9,8 +9,10 @@
         <e p="Audiocontroller.cs" t="Include" />
         <e p="NextScene.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="CageScript.cs" t="Include" />
           <e p="CameraMovement.cs" t="Include" />
           <e p="CameraShader.cs" t="Include" />
+          <e p="MeteoriteManager.cs" t="Include" />
           <e p="ObjectRotation.cs" t="Include" />
           <e p="PickUp.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />

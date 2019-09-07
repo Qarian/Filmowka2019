@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: RRRB
   m_EditorClassIdentifier: 
-  text: Niebieskie naisy
+  text: I have enough of you. You should do what I want. There is no other choice!
   audio: {fileID: 8300000, guid: 92564fabb7cac2043967d5d6198a8955, type: 3}
-  extraTime: 3
+  extraTime: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: Intro 2
   m_EditorClassIdentifier: 
-  text: 0 Tekst
+  text: I'm your creator and you are my creature.
   audio: {fileID: 8300000, guid: 0fc0fc283584adc42a3f587c8476cb3b, type: 3}
   extraTime: 0

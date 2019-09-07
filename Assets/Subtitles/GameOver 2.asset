@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: GAME OVER
   audio: {fileID: 0}
-  extraTime: 10
+  extraTime: 0

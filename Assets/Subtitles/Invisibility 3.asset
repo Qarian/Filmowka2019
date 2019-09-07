@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc0fb695c7e9814f834f4321b9c23ec, type: 3}
   m_Name: Invisibility 3
   m_EditorClassIdentifier: 
-  text: 
+  text: Being a <color=blue>god</color> or being a <color=red>mortal</color>
   audio: {fileID: 8300000, guid: 724580c267db65d458f6428d813341fb, type: 3}
   extraTime: 0
