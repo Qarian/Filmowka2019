@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.PostProcessing;
@@ -8,19 +9,24 @@ public class PickUp : MonoBehaviour
 {
 	[SerializeField] UnityEvent onPickUp = default;
 
+	public float dissolveSpeed = 1.0f;
+	public float startDissolveValue = 0.8f;
 	public PostProcessVolume postprocess;
 	public Camera mainCamera;
 	public RawImage whiteScreen;
-	Bloom bloom;
-	private bool triggered = false;
-	
-	
+	public Material dissolveMaterial;
 
+	Bloom bloom;
+
+	private bool triggerDissolve;
+	private bool triggered = false;
 	private float startBloom;
 
 	private float initialBloom;
 	private Color initialColor;
 	private float initialFieldOfView;
+
+	private float currentDisolve;
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -30,7 +36,7 @@ public class PickUp : MonoBehaviour
 		}
 		initialColor = whiteScreen.color;
 		initialFieldOfView = mainCamera.fieldOfView;
-		triggered = true;
+		triggerDissolve = true;
 		//onPickUp.Invoke();
 	}
 	private void Update()
@@ -45,22 +51,33 @@ public class PickUp : MonoBehaviour
 			whiteScreen.color = Color.Lerp(whiteScreen.color, Color.white, 0.03f);
 			mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 160.0f, 0.02f);
 
-			if (bloom.intensity.value >= 200.0f)
+			if (bloom.intensity.value >= 150.0f)
 			{
 				triggered = false;
 				onPickUp.Invoke();
 				mainCamera.fieldOfView = initialFieldOfView;
 				whiteScreen.color = initialColor;
+				dissolveMaterial.SetFloat("_Dissolve", startDissolveValue);
 				bloom.intensity.value = initialBloom;
-
 			}
 			
 		}
+		
+		if (triggerDissolve)
+		{
+			currentDisolve += Time.deltaTime * dissolveSpeed;
+			dissolveMaterial.SetFloat("_Dissolve",currentDisolve);
 
+			if (dissolveMaterial.GetFloat("_Dissolve") > 1.7f)
+			{
+				triggered = true;
+				triggerDissolve = false;
+			
+			}
+		}
 	}
-
-
-		public void ShowNextSubtitles()
+	
+	public void ShowNextSubtitles()
 		{
 			SubtitlesManager.singleton.ShowNextSubtitles();
 		}

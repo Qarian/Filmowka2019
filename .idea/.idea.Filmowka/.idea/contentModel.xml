@@ -13,6 +13,7 @@
           <e p="PickUp.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="SkyManager.cs" t="Include" />
+          <e p="StarScript.cs" t="Include" />
           <e p="Subtitles" t="Include">
             <e p="StreamVideo.cs" t="Include" />
             <e p="SubtitleScript.cs" t="Include" />
@@ -21,6 +22,7 @@
         </e>
         <e p="Shaders" t="Include">
           <e p="Background.shader" t="Include" />
+          <e p="DissolveShader.shader" t="Include" />
           <e p="PixelShader.shader" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
