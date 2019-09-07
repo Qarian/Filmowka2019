@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SkyManager : MonoBehaviour
 {
 	[SerializeField]
-	float skyRotationSpeed;
+	float skyRotationSpeed = default;
 
 	Material skybox;
 
