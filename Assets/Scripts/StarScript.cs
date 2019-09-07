@@ -6,7 +6,7 @@ public class StarScript : MonoBehaviour
 	float speed = 5f;
 
 	[SerializeField]
-	Transform target;
+	Transform target = default;
 
 	Vector3 dir;
 

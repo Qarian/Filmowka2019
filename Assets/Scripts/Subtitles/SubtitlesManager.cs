@@ -27,7 +27,10 @@ public class SubtitlesManager : MonoBehaviour
 		subtitleScript.Begin(streamVideoScript);
 	}
 
-	public void Show
+	public void ShowSubtitles(List<SubtitlesFile> subtitles)
+	{
+		subtitleScript.ShowSubtitles(subtitles);
+	}
 	/*
 	public void ShowNextSubtitles()
 	{

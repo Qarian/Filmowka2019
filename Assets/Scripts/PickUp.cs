@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEditor.UIElements;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.PostProcessing;
@@ -7,6 +6,10 @@ using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
+	[SerializeField]
+	List<SubtitlesFile> subtitles = default;
+	[SerializeField]
+	GameObject objectToActivate = default;
 	[SerializeField] UnityEvent onPickUp = default;
 
 	public float dissolveSpeed = 1.0f;
@@ -60,7 +63,13 @@ public class PickUp : MonoBehaviour
 	
 	public void ShowNextSubtitles()
 	{
-		SubtitlesManager.singleton.ShowNextSubtitles();
+		SubtitlesManager.singleton.ShowSubtitles(subtitles);
+	}
+
+	public void ChangeActiveObject()
+	{
+		objectToActivate.SetActive(true);
+		transform.parent.gameObject.SetActive(false);
 	}
 
 	private void IncreaseBloom()
@@ -87,9 +96,7 @@ public class PickUp : MonoBehaviour
 				dissolveMaterial.SetFloat("_Dissolve", startDissolveValue);
 				bloom.intensity.value = initialBloom;
 			}
-			
 		}
-
 	}
 	
 	private void IncreaseDissolve()

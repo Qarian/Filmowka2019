@@ -11,11 +11,11 @@ public class SubtitleScript : MonoBehaviour
 	[SerializeField]
 	TextMeshProUGUI text = default;
 
-	[Space]
 	List<SubtitlesFile> subtitles = default;
 
 	AudioSource audioSource;
 	StreamVideo streamVideoScript;
+	CharacterController controller;
 
 	int subtitlesId = 0;
 
@@ -25,17 +25,16 @@ public class SubtitleScript : MonoBehaviour
 		this.streamVideoScript = streamVideoScript;
 
 		gameObject.SetActive(false);
-
-		if (subtitles.Count == 0)
-			Debug.LogError("Nie ma pliku subtitles!!!");
+		controller = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
 	}
 
 	public void ShowSubtitles(List<SubtitlesFile> subtitles)
 	{
 		this.subtitles = subtitles;
+		ShowCurrentSubtitles();
 	}
 
-	void ShowSubtitles()
+	void ShowCurrentSubtitles()
 	{
 		gameObject.SetActive(true);
 		text.text = subtitles[subtitlesId].text;
@@ -52,12 +51,15 @@ public class SubtitleScript : MonoBehaviour
 	IEnumerator HideSubtitles(float time)
 	{
 		yield return new WaitForSeconds(time);
-		if (subtitles.Count > subtitlesId)
+		if (subtitles.Count >= subtitlesId)
 		{
 			subtitlesId++;
-			ShowSubtitles();
+			ShowCurrentSubtitles();
 		}
 		else
+		{
+			controller.enabled = true;
 			gameObject.SetActive(false);
+		}
 	}
 }
