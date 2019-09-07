@@ -90,12 +90,12 @@ public class PickUp : MonoBehaviour
 			{
 				triggered = false;
 				onPickUp.Invoke();
-				
+				dissolveMaterial.SetFloat("_Dissolve", startDissolveValue);
 				TeleportPlayer();
 			
 				mainCamera.fieldOfView = initialFieldOfView;
 				whiteScreen.color = initialColor;
-				dissolveMaterial.SetFloat("_Dissolve", startDissolveValue);
+				
 				bloom.intensity.value = initialBloom;
 			}
 		}
