@@ -6,13 +6,21 @@
     <e p="D:\Filmowka" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CameraMovement.cs" t="Include" />
-        <e p="PlayerMovement.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="CameraMovement.cs" t="Include" />
           <e p="CameraShader.cs" t="Include" />
           <e p="ObjectRotation.cs" t="Include" />
+          <e p="PickUp.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="SkyManager.cs" t="Include" />
+          <e p="Subtitles" t="Include">
+            <e p="StreamVideo.cs" t="Include" />
+            <e p="SubtitleScript.cs" t="Include" />
+            <e p="SubtitlesManager.cs" t="Include" />
+          </e>
         </e>
         <e p="Shaders" t="Include">
+          <e p="Background.shader" t="Include" />
           <e p="PixelShader.shader" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
