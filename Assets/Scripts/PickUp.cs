@@ -38,9 +38,12 @@ public class PickUp : MonoBehaviour
 	private float currentDisolve;
 	
 	Transform player;
+	AudioSource source;
 
 	private void OnTriggerEnter(Collider other)
 	{
+		source = GetComponent<AudioSource>();
+		source.Play();
 		player = other.transform;
 		CharacterController controller = player.GetComponent<CharacterController>();
 		controller.enabled = false;

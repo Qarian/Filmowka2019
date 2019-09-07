@@ -3518,7 +3518,7 @@ PrefabInstance:
         type: 3}
       propertyPath: subtitles.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: fe194474c7fe2b84cb62007fe6eb8074,
+      objectReference: {fileID: 11400000, guid: a280b6ae76b97294f96bb76268187ac1,
         type: 2}
     - target: {fileID: 5682583681293407192, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
         type: 3}
