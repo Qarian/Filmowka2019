@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class StarScript : MonoBehaviour
 {
-	[SerializeField]
-	float speed = 5f;
+	public float speed = 5f;
 
 	[SerializeField]
-	GameObject meshGO;
+	GameObject meshGO = default;
 	[SerializeField]
-	ParticleSystem trailParticle;
+	ParticleSystem trailParticle = default;
 	[SerializeField]
-	GameObject boomParticleGO;
+	GameObject boomParticleGO = default;
 	[SerializeField]
 	Transform target = default;
+
+	[Space]
+	[SerializeField]
+	List<SubtitlesFile> gameOverSubtitles = default;
 
 	Vector3 dir;
 	bool hit = false;
@@ -59,9 +63,12 @@ public class StarScript : MonoBehaviour
 		int i = 0;
 		while (i < hitColliders.Length)
 		{
-			Debug.Log(hitColliders[i].name, hitColliders[i].gameObject);
 			if (hitColliders[i].tag == "Player")
+			{
 				KillPlayer();
+				Destroy(hitColliders[i]);
+			}
+				
 			else if (hitColliders[i].isTrigger == false)
 				Boom();
 
@@ -71,7 +78,6 @@ public class StarScript : MonoBehaviour
 
 	void Boom()
 	{
-		Debug.Log("Boom");
 		if (hit)
 			return;
 
@@ -88,7 +94,7 @@ public class StarScript : MonoBehaviour
 
 	void KillPlayer()
 	{
-
+		SubtitlesManager.singleton.ShowSubtitles(gameOverSubtitles, null);
 	}
 
 	void SetupMaterial()

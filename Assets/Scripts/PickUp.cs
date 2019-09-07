@@ -85,7 +85,7 @@ public class PickUp : MonoBehaviour
 		{
 			if (postprocess.profile.TryGetSettings(out bloom))
 			{
-				bloom.intensity.value = Mathf.Lerp(bloom.intensity.value, 300.0f, 0.025f);
+				bloom.intensity.value = Mathf.Lerp(bloom.intensity.value, 300.0f, 0.015f);
 			}
 
 			whiteScreen.color = Color.Lerp(whiteScreen.color, Color.white, 0.03f);
@@ -103,6 +103,7 @@ public class PickUp : MonoBehaviour
 				whiteScreen.color = initialColor;
 				
 				bloom.intensity.value = initialBloom;
+				triggered = false;
 			}
 		}
 	}
@@ -125,8 +126,6 @@ public class PickUp : MonoBehaviour
 
 	private void TeleportPlayer()
 	{
-		Debug.Log("",player.gameObject);
-		
 		player.position = new Vector3(0f, 1f, 0f);
 		
 	}

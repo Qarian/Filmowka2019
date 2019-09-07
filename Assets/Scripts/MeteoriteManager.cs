@@ -13,6 +13,7 @@ public class MeteoriteManager : MonoBehaviour
 	List<GameObject> meteoritesGO;
 
 	bool generating = true;
+	int strength;
 
 	private void OnDrawGizmos()
 	{
@@ -35,19 +36,25 @@ public class MeteoriteManager : MonoBehaviour
 		Gizmos.DrawLine(pos, lastPos);
 	}
 
-	public void StartGeneratingMeteorites()
+	public void StartGeneratingMeteorites(int strength)
 	{
+		this.strength = strength;
+		transform.position = new Vector3(transform.position.x, 8f - strength * 0.7f, transform.position.z);
+		radius = 9f - 1f * strength;
+		generatingFrequency = 2.2f - 0.5f * strength;
 		meteoritesGO = new List<GameObject>();
 		StartCoroutine(MakeMeteorite());
 	}
 
 	IEnumerator MakeMeteorite()
 	{
-		yield return new WaitForSeconds(generatingFrequency);
+		yield return new WaitForSeconds(2f);
 		while (generating)
 		{
 			Vector3 pos = transform.position + new Vector3(Random.Range(-radius, radius), 0f, Random.Range(-radius, radius));
-			meteoritesGO.Add(Instantiate(meteoritePrefab, pos, Quaternion.identity));
+			GameObject go = Instantiate(meteoritePrefab, pos, Quaternion.identity);
+			meteoritesGO.Add(go);
+			go.GetComponent<StarScript>().speed = 3 + strength * 0.9f;
 			yield return new WaitForSeconds(generatingFrequency);
 		}
 	}

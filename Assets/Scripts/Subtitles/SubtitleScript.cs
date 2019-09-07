@@ -62,11 +62,14 @@ public class SubtitleScript : MonoBehaviour
 		}
 		else
 		{
-			controller.enabled = true;
 			if (SceneManager.GetActiveScene().buildIndex == 0)
-			{
 				SceneManager.LoadScene(1);
-			}
+
+			controller.enabled = true;
+
+			if (onSubtitlesClose != null)
+				onSubtitlesClose.Invoke();
+
 			gameObject.SetActive(false);
 		}
 	}
