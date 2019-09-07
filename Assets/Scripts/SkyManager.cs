@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class SkyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField]
+	float skyRotationSpeed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	Material skybox;
+
+	private void Start()
+	{
+		skybox = RenderSettings.skybox;
+	}
+
+	private void Update()
+	{
+		skybox.SetFloat("_Rotation", Time.time * skyRotationSpeed);
+	}
 }

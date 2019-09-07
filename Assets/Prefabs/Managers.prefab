@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7692604837974675576}
   - component: {fileID: 64435294}
   - component: {fileID: 64435297}
+  - component: {fileID: 1016000652}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -47,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitlesPrefab: {fileID: 6168456646093667717, guid: baec8c603dca5c441914c13e819ce434,
     type: 3}
-  backgroundVideo: {fileID: 32900000, guid: 32253cccf5c1a9e40ac0a086225fce6e, type: 3}
   subtitles: []
   subtitlesClip: []
   extraOffset: 
@@ -98,3 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 64435294}
+--- !u!114 &1016000652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4224924976682269548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf9ac494731e7d4ba986b686dfa2f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyRotationSpeed: 0.6
