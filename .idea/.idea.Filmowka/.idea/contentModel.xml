@@ -6,6 +6,7 @@
     <e p="D:\Filmowka" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="NextScene.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
           <e p="CameraShader.cs" t="Include" />
@@ -19,6 +20,7 @@
             <e p="SubtitleScript.cs" t="Include" />
             <e p="SubtitlesManager.cs" t="Include" />
           </e>
+          <e p="SubtitlesFile.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="Background.shader" t="Include" />
