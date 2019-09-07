@@ -18,6 +18,7 @@ public class PickUp : MonoBehaviour
 
 	Bloom bloom;
 
+	public bool IsFastSubtitle;
 	private bool triggerDissolve;
 	private bool triggered = false;
 	private float startBloom;
@@ -27,18 +28,28 @@ public class PickUp : MonoBehaviour
 	private float initialFieldOfView;
 
 	private float currentDisolve;
-	private Collider player;
+	
+	Transform player;
 
 	private void OnTriggerEnter(Collider other)
 	{
-		player = other;
-		if (postprocess.profile.TryGetSettings(out bloom))
+		if (IsFastSubtitle)
 		{
-			initialBloom = bloom.intensity.value;
+			onPickUp.Invoke();
 		}
-		initialColor = whiteScreen.color;
-		initialFieldOfView = mainCamera.fieldOfView;
-		triggerDissolve = true;
+		else
+		{
+			player = other.transform;
+			
+			if (postprocess.profile.TryGetSettings(out bloom))
+			{
+				initialBloom = bloom.intensity.value;
+			}
+			initialColor = whiteScreen.color;
+			initialFieldOfView = mainCamera.fieldOfView;
+			triggerDissolve = true;
+		}
+		
 		//onPickUp.Invoke();
 	}
 	private void Update()
@@ -48,9 +59,9 @@ public class PickUp : MonoBehaviour
 	}
 	
 	public void ShowNextSubtitles()
-		{
-			SubtitlesManager.singleton.ShowNextSubtitles();
-		}
+	{
+		SubtitlesManager.singleton.ShowNextSubtitles();
+	}
 
 	private void IncreaseBloom()
 	{
@@ -68,6 +79,7 @@ public class PickUp : MonoBehaviour
 			{
 				triggered = false;
 				onPickUp.Invoke();
+				
 				TeleportPlayer();
 			
 				mainCamera.fieldOfView = initialFieldOfView;
@@ -98,7 +110,11 @@ public class PickUp : MonoBehaviour
 
 	private void TeleportPlayer()
 	{
-		player.transform.position = new Vector3(0,1,0);
+		Debug.Log("",player.gameObject);
+		CharacterController controller = player.GetComponent<CharacterController>();
+		controller.enabled = false;
+		player.position = new Vector3(0f, 1f, 0f);
+		controller.enabled = true;
 	}
 
 }

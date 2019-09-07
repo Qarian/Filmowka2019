@@ -141,6 +141,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   whiteScreen: {fileID: 0}
   dissolveMaterial: {fileID: 2100000, guid: b9db92de8f746d84680e925a96d2668d, type: 2}
+  IsFastSubtitle: 0
 --- !u!135 &87438172270885418
 SphereCollider:
   m_ObjectHideFlags: 0
