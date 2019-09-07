@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-
+    public PickUp startPick;
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene(1);
+
+            startPick.enabled = true;
+        
         }
     }
+    
+    
 }

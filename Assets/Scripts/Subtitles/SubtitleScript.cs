@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class SubtitleScript : MonoBehaviour
@@ -59,6 +60,10 @@ public class SubtitleScript : MonoBehaviour
 		else
 		{
 			controller.enabled = true;
+			if (SceneManager.GetActiveScene().buildIndex == 0)
+			{
+				SceneManager.LoadScene(1);
+			}
 			gameObject.SetActive(false);
 		}
 	}
