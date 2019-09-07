@@ -67,6 +67,8 @@ public class MeteoriteManager : MonoBehaviour
 
 	public void DestroyAllMeteorites()
 	{
+		if (meteoritesGO == null)
+			return;
 		for (int i = 0; i < meteoritesGO.Count; i++)
 		{
 			if (meteoritesGO[i] != null)
