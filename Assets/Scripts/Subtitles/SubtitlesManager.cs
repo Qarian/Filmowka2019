@@ -8,15 +8,6 @@ public class SubtitlesManager : MonoBehaviour
 	[SerializeField]
 	GameObject subtitlesPrefab = default;
 
-	[Space]
-	public List<string> subtitles;
-	[SerializeField]
-	List<AudioClip> subtitlesClip = default;
-	[SerializeField]
-	List<int> extraOffset = default;
-
-	int nextId = 0;
-
 	SubtitleScript subtitleScript;
 	StreamVideo streamVideoScript;
 
@@ -29,9 +20,6 @@ public class SubtitlesManager : MonoBehaviour
 
 	private void Start()
 	{
-		if (subtitles.Count != subtitlesClip.Count)
-			Debug.LogError("Rożna liczba napisów i plików dźwiękowych", gameObject);
-
 		streamVideoScript = GetComponent<StreamVideo>();
 		subtitleScript = Instantiate(subtitlesPrefab).GetComponent<SubtitleScript>();
 
@@ -39,6 +27,8 @@ public class SubtitlesManager : MonoBehaviour
 		subtitleScript.Begin(streamVideoScript);
 	}
 
+	public void Show
+	/*
 	public void ShowNextSubtitles()
 	{
 		if (subtitles.Count == nextId)
@@ -66,5 +56,5 @@ public class SubtitlesManager : MonoBehaviour
 		}
 
 		nextId++;
-	}
+	}*/
 }

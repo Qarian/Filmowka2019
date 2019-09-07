@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEditor.UIElements;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.PostProcessing;
@@ -7,6 +6,10 @@ using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
+	[SerializeField]
+	List<SubtitlesFile> subtitles = default;
+	[SerializeField]
+	GameObject objectToActive = default;
 	[SerializeField] UnityEvent onPickUp = default;
 
 	public float dissolveSpeed = 1.0f;
@@ -48,9 +51,9 @@ public class PickUp : MonoBehaviour
 	}
 	
 	public void ShowNextSubtitles()
-		{
-			SubtitlesManager.singleton.ShowNextSubtitles();
-		}
+	{
+		SubtitlesManager.singleton.ShowNextSubtitles(subtitles);
+	}
 
 	private void IncreaseBloom()
 	{
