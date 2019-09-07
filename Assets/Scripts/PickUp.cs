@@ -27,9 +27,11 @@ public class PickUp : MonoBehaviour
 	private float initialFieldOfView;
 
 	private float currentDisolve;
+	private Collider player;
 
 	private void OnTriggerEnter(Collider other)
 	{
+		player = other;
 		if (postprocess.profile.TryGetSettings(out bloom))
 		{
 			initialBloom = bloom.intensity.value;
@@ -40,6 +42,17 @@ public class PickUp : MonoBehaviour
 		//onPickUp.Invoke();
 	}
 	private void Update()
+	{
+		IncreaseBloom();
+		IncreaseDissolve();
+	}
+	
+	public void ShowNextSubtitles()
+		{
+			SubtitlesManager.singleton.ShowNextSubtitles();
+		}
+
+	private void IncreaseBloom()
 	{
 		if (triggered)
 		{
@@ -55,6 +68,8 @@ public class PickUp : MonoBehaviour
 			{
 				triggered = false;
 				onPickUp.Invoke();
+				TeleportPlayer();
+			
 				mainCamera.fieldOfView = initialFieldOfView;
 				whiteScreen.color = initialColor;
 				dissolveMaterial.SetFloat("_Dissolve", startDissolveValue);
@@ -62,7 +77,11 @@ public class PickUp : MonoBehaviour
 			}
 			
 		}
-		
+
+	}
+	
+	private void IncreaseDissolve()
+	{
 		if (triggerDissolve)
 		{
 			currentDisolve += Time.deltaTime * dissolveSpeed;
@@ -76,10 +95,10 @@ public class PickUp : MonoBehaviour
 			}
 		}
 	}
-	
-	public void ShowNextSubtitles()
-		{
-			SubtitlesManager.singleton.ShowNextSubtitles();
-		}
-	
+
+	private void TeleportPlayer()
+	{
+		player.transform.position = new Vector3(0,1,0);
+	}
+
 }
