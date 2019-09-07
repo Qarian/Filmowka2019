@@ -108,6 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29accc27a8e9944439b813e29a6c6bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subtitles:
+  - {fileID: 11400000, guid: fe194474c7fe2b84cb62007fe6eb8074, type: 2}
+  - {fileID: 11400000, guid: 5b0e79605dedef747874b4589e4306af, type: 2}
+  objectToActivate: {fileID: 0}
   onPickUp:
     m_PersistentCalls:
       m_Calls:
@@ -133,6 +137,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5682583681293407192}
+        m_MethodName: ChangeActiveObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dissolveSpeed: 1
@@ -141,7 +156,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   whiteScreen: {fileID: 0}
   dissolveMaterial: {fileID: 2100000, guid: b9db92de8f746d84680e925a96d2668d, type: 2}
-  IsFastSubtitle: 0
+  IsFastSubtitle: 1
 --- !u!135 &87438172270885418
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -36,14 +36,16 @@ public class PickUp : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		player = other.transform;
+		CharacterController controller = player.GetComponent<CharacterController>();
+		controller.enabled = false;
+
 		if (IsFastSubtitle)
 		{
 			onPickUp.Invoke();
 		}
 		else
 		{
-			player = other.transform;
-			
 			if (postprocess.profile.TryGetSettings(out bloom))
 			{
 				initialBloom = bloom.intensity.value;
@@ -118,10 +120,9 @@ public class PickUp : MonoBehaviour
 	private void TeleportPlayer()
 	{
 		Debug.Log("",player.gameObject);
-		CharacterController controller = player.GetComponent<CharacterController>();
-		controller.enabled = false;
+		
 		player.position = new Vector3(0f, 1f, 0f);
-		controller.enabled = true;
+		
 	}
 
 }

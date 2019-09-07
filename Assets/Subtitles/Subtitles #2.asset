@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Drugie napisy
   audio: {fileID: 0}
-  extraTime: 5
+  extraTime: 3

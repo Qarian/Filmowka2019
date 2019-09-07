@@ -51,7 +51,7 @@ public class SubtitleScript : MonoBehaviour
 	IEnumerator HideSubtitles(float time)
 	{
 		yield return new WaitForSeconds(time);
-		if (subtitles.Count >= subtitlesId)
+		if (subtitles.Count > subtitlesId + 1)
 		{
 			subtitlesId++;
 			ShowCurrentSubtitles();
