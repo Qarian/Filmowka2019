@@ -1028,6 +1028,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invinsible 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7046175988121199880, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7046175988121199893, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2257,6 +2262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Invinsible 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046175988121199880, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7046175988121199893, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
         type: 3}
@@ -3993,6 +4003,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invinsible 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7046175988121199880, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7046175988121199893, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5556,6 +5571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Invinsible 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046175988121199880, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7046175988121199893, guid: da9c8a7a24a1d9c44bf2c899ab6d1cba,
         type: 3}

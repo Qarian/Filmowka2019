@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RRRBR 4
   m_EditorClassIdentifier: 
   text: Congratulation
-  audio: {fileID: 8300000, guid: 4e35fc56ecb85cb4cb82ec0b900e9425, type: 3}
+  audio: {fileID: 0}
   extraTime: 99999
