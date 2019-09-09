@@ -5,6 +5,8 @@ public class StarScript : MonoBehaviour
 {
 	public float speed = 5f;
 
+	public bool special = false;
+	
 	[SerializeField]
 	GameObject meshGO = default;
 	[SerializeField]
@@ -52,6 +54,9 @@ public class StarScript : MonoBehaviour
 
 	void Update()
 	{
+		if (special)
+			FlyToTarget();
+		
 		if (hit)
 		{
 			particleTime += Time.deltaTime;

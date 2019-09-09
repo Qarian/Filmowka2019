@@ -41,8 +41,8 @@ public class MeteoriteManager : MonoBehaviour
 		generating = true;
 		this.strength = strength;
 		transform.position = new Vector3(transform.position.x, 8f - strength * 0.7f, transform.position.z);
-		radius = 9f - 1f * strength;
-		generatingFrequency = 2.2f - 0.5f * strength;
+		radius = 10f - 1f * strength;
+		generatingFrequency = 2.2f - 0.6f * strength;
 		meteoritesGO = new List<GameObject>();
 		StartCoroutine(MakeMeteorite());
 	}
@@ -55,7 +55,7 @@ public class MeteoriteManager : MonoBehaviour
 			Vector3 pos = transform.position + new Vector3(Random.Range(-radius, radius), 0f, Random.Range(-radius, radius));
 			GameObject go = Instantiate(meteoritePrefab, pos, Quaternion.identity);
 			meteoritesGO.Add(go);
-			go.GetComponent<StarScript>().speed = 3 + strength * 0.9f;
+			go.GetComponent<StarScript>().speed = 3 + strength * 1.2f;
 			yield return new WaitForSeconds(generatingFrequency);
 		}
 	}

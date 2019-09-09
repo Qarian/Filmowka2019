@@ -13,6 +13,8 @@ public class PickUp : MonoBehaviour
 
 	[Space]
 	[SerializeField]
+	UnityEvent onTrigger = default;
+	[SerializeField]
 	UnityEvent onPickUp = default;
 	[SerializeField]
 	UnityEvent onSubtitlesClose = default;
@@ -48,6 +50,8 @@ public class PickUp : MonoBehaviour
 		CharacterController controller = player.GetComponent<CharacterController>();
 		controller.enabled = false;
 
+		onTrigger.Invoke();
+		
 		if (IsFastSubtitle)
 		{
 			onPickUp.Invoke();
